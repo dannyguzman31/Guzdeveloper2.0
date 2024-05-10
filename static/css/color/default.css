@@ -1,30 +1,28 @@
 ::selection {
-  background-color: #9bf8f4;
+  background-color: #557c93;
   color: #fff;
 }
 ::-moz-selection {
-  background-color: #9bf8f4;
+  background-color: #557c93;
   color: #fff;
 }
 
 .theme-color {
-  color: #9bf8f4;
+  color: #557c93;
 }
 
 .theme-after-bg:after,
 .btn-theme,
 .theme-bg {
-  background: #9bf8f4;
+  background: #557c93;
 }
 
 .btn-theme {
-  border-color: #9bf8f4;
+  border-color: #557c93;
 }
 
 .profile_img {
   position: relative; 
-  width: 95%; 
-  height: 95%; 
   overflow: hidden; 
   border-radius: 10%; 
 }
@@ -38,16 +36,16 @@
 .m-btn-white:hover,
 .theme-after:after,
 .theme-g-bg {
-  background: #9bf8f4;
-  background: -webkit-linear-gradient(to left, #6f7bf7, #9bf8f4);
-  background: linear-gradient(to left, #6f7bf7, #9bf8f4);
+  background: #557c93;
+  background: -webkit-linear-gradient(to left, #08203e, #557c93);
+  background: linear-gradient(to left, #08203e, #557c93);
 }
 
 /*Reverce*/
 .m-btn-theme:hover {
   background: #0072ff;
-  background: -webkit-linear-gradient(to left, #9bf8f4, #6f7bf7);
-  background: linear-gradient(to left, #9bf8f4, #6f7bf7);
+  background: -webkit-linear-gradient(to left, #557c93, #08203e);
+  background: linear-gradient(to left, #557c93, #08203e);
 }
 
 .home-banner .avtar-img,
@@ -58,6 +56,6 @@
 
 @media (max-width: 991px) {
   .header {
-    background: #9bf8f4;
+    background: #557c93;
   }
 }
