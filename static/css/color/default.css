@@ -22,9 +22,35 @@
 }
 
 .profile_img {
-  position: relative; 
-  overflow: hidden; 
-  border-radius: 10%; 
+  width: 100%; /* Make the image responsive */
+  max-width: 350px; /* Set a maximum width for the image */
+  height: auto; /* Maintain aspect ratio */
+  position: relative;
+  overflow: hidden;
+  border-radius: 10%;
+  filter: blur(2.5px); /* Apply a blur effect by default */
+  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+}
+
+.profile_img:hover {
+  filter: blur(0); /* Remove the blur effect on hover */
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.icon {
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.icon:hover {
+  animation: spin 0.5s linear 1; /* Play the spin animation once */
 }
 
 .portfolio-hover-01 .action-btn a:hover,
