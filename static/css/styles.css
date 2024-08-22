@@ -682,6 +682,24 @@ img {
     font-size: 13px;
   }
 }
+/* Specific styling for iPads and Safari */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .home-banner {
+    background-attachment: scroll;
+    background-position: center center;
+  }
+}
+
+/* WebKit-specific for Safari handling */
+@media not all and (min-resolution: .001dpcm) {
+  @supports (-webkit-appearance:none) {
+    .home-banner {
+      background-attachment: scroll !important;
+      background-position: center center !important;
+      background-size: cover !important;
+    }
+  }
+}
 
 /*-----------------------------------------
 *  About Left
