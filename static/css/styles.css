@@ -691,13 +691,34 @@ img {
 }
 
 /* WebKit-specific for Safari handling */
-@media not all and (min-resolution: .001dpcm) {
-  @supports (-webkit-appearance:none) {
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
     .home-banner {
       background-attachment: scroll !important;
       background-position: center center !important;
       background-size: cover !important;
     }
+  }
+}
+@media (orientation: portrait) {
+  .home-banner {
+    background-size: contain;
+    background-position: center center;
+    background-attachment: scroll; /* Ensures the background scrolls normally */
+  }
+}
+
+@media (orientation: landscape) {
+  .home-banner {
+    background-size: cover;
+    background-position: center center;
+  }
+}
+@media (orientation: portrait) {
+  .home-banner {
+    background-image: url('static/img/img/main4-portrait.jpg');
+    background-size: cover;
+    background-position: center center;
   }
 }
 
