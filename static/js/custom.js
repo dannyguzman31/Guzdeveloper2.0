@@ -3,20 +3,38 @@
   var DAN = {};
 
   /*--------------------
-      * Pre Load
-    ----------------------*/
+ * Pre Load
+----------------------*/
   DAN.WebLoad = function () {
-    document.getElementById('loading').style.display = 'none';
+    setTimeout(function () {
+      // Array of image filenames
+      const images = ['main1.jpg', 'main2.jpg', 'main3.jpg', 'main4.jpg', 'main5.jpg'];
+  
+      // Randomly select an image from the array
+      const randomImage = images[Math.floor(Math.random() * images.length)];
+  
+      // Set the selected image as the background of the home-banner section
+      const bannerSection = document.querySelector('.home-banner');
+      bannerSection.style.backgroundImage = 'url(static/img/img/' + randomImage + ')';
+  
+      // Fade out the loader
+      let loader = document.getElementById('loading');
+      loader.style.transition = 'opacity 1s';
+      loader.style.opacity = '0';
+      setTimeout(function () {
+        loader.style.display = 'none';
+      }, 1000); // Wait for the fade-out to complete before hiding
+    }, 1000);
   };
-
-  /*--------------------
-        * Header Class
-    ----------------------*/
-  DAN.HeaderSticky = function () {
-    $('.navbar-toggler').on('click', function (a) {
-      a.preventDefault(), $('.navbar').addClass('fixed-header');
-    });
-  };
+  
+  // /*--------------------
+  //       * Header Class
+  //   ----------------------*/
+  // DAN.HeaderSticky = function () {
+  //   $('.navbar-toggler').on('click', function (a) {
+  //     a.preventDefault(), $('.navbar').addClass('fixed-header');
+  //   });
+  // };
 
   /*--------------------
         * Menu Close

@@ -21,19 +21,36 @@
   border-color: #557c93;
 }
 
-.profile_img {
-  width: 100%; /* Make the image responsive */
-  max-width: 350px; /* Set a maximum width for the image */
-  height: auto; /* Maintain aspect ratio */
+/* 
+*********
+  Profile Image:
+*********
+*/
+.profile-composition {
   position: relative;
-  overflow: hidden;
-  border-radius: 10%;
-  filter: blur(2.5px); /* Apply a blur effect by default */
-  transition: filter 0.3s ease; /* Smooth transition for the blur effect */
+  display: inline-block; /* Ensure the container wraps around the image */
 }
 
-.profile_img:hover {
-  filter: blur(0); /* Remove the blur effect on hover */
+.profile-composition__photo {
+  width: 100%; /* Make the image responsive to its container */
+  max-width: 350px; /* Set a max-width to control the image size */
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.4);
+  border-radius: 10%; /* Adjust the border-radius as needed */
+  position: relative; /* Change to relative to keep it in place */
+  z-index: 10;
+  transition: all 0.2s;
+  outline-offset: 1rem; /* Adjust this for the outline offset */
+}
+
+.profile-composition__photo:hover {
+  outline: 1.5rem solid #415a77; /* Blue outline on hover */
+  transform: scale(1.05); /* Slight scale on hover */
+  box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5); /* Enhanced shadow on hover */
+  z-index: 20;
+}
+
+.profile-composition:hover .profile-composition__photo:not(:hover) {
+  transform: scale(1); /* Keep the scale normal for non-hover state */
 }
 
 @keyframes spin {
