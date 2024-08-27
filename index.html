@@ -621,122 +621,83 @@
         <!-- Container -->
       </section>
       <!--  Portfolio End  -->
-      <!-- Contact Start -->
-      <section id="contact" class="section p-0px-b gray-bg contact-section">
-        <div class="container">
-          <div class="row justify-content-center m-60px-b md-m-40px-b">
-            <div class="col-12 col-md-10 col-lg-7">
+     <!-- Contact Start -->
+<section id="contact" class="section p-0px-b gray-bg contact-section">
+  <div class="container">
+      <div class="row justify-content-center m-60px-b md-m-40px-b">
+          <div class="col-12 col-md-10 col-lg-7">
               <div class="section-title text-center">
-                <h2 class="font-alt">Contact Me</h2>
-                <p>
-                  Thank you for visiting my website! If you have any inquiries, collaboration opportunities, or just want to say hello, feel free to get in touch with me. I value open communication and am always eager to connect with like-minded individuals passionate about technology and innovation.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-us-box">
-            <div class="row no-gutters">
-              <div class="col-md-6">
-                <div class="contact-info-box">
-                  <h2>get in touch</h2>
-                  <p class="desc">
-                    You can reach me through the contact form below, and I'll get back to you as soon as possible. 
+                  <h2 class="font-alt">Contact Me</h2>
+                  <p>
+                      Thank you for visiting my website! If you have any inquiries, collaboration opportunities, or just want to say hello, feel free to get in touch with me. I value open communication and am always eager to connect with like-minded individuals passionate about technology and innovation.
                   </p>
-                  <div class="contact-info">
-                    <i class="icon theme-bg ti-direction"></i>
-                    <p>
-                      Florence<br />
-                      Arizona
-                    </p>
-                  </div>
+              </div>
+          </div>
+      </div>
 
-                  <div class="contact-info">
-                    <i class="icon theme-bg ti-email"></i>
-                    <p>guzdeveloper1@gmail.com<br />dannyguzmancastillo31@gmail.com</p>
-                  </div>
+      <div class="contact-us-box">
+          <div class="row no-gutters">
+              <div class="col-md-6">
+                  <div class="contact-info-box">
+                      <h2>Get in Touch</h2>
+                      <p class="desc">
+                          You can reach me through the contact form below, and I'll get back to you as soon as possible.
+                      </p>
+                      <div class="contact-info">
+                          <i class="icon theme-bg ti-direction"></i>
+                          <p>
+                              Florence<br />
+                              Arizona
+                          </p>
+                      </div>
 
-                  <div class="contact-info">
-                    <i class="icon theme-bg ti-mobile"></i>
-                    <p>
-                      +1 424-324-9963<br />
-                      
-                    </p>
+                      <div class="contact-info">
+                          <i class="icon theme-bg ti-email"></i>
+                          <p>guzdeveloper1@gmail.com<br />dannyguzmancastillo31@gmail.com</p>
+                      </div>
+
+                      <div class="contact-info">
+                          <i class="icon theme-bg ti-mobile"></i>
+                          <p>
+                              +1 424-324-9963<br />
+                          </p>
+                      </div>
                   </div>
-                </div>
               </div>
               <div class="col-md-6">
-                <!-- Contact Form -->
-                <div class="contact-form">
-                  <h2>Say Something</h2>
-                  <form method="POST">
-                    <div class="form-group">
-                      <input
-                        name="Name"
-                        id="name"
-                        placeholder="Full Name"
-                        class="form-control"
-                        type="text"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        name="Email"
-                        id="email"
-                        placeholder="Email"
-                        class="form-control"
-                        type="email"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <input
-                        name="Subject"
-                        id="subject"
-                        placeholder="Subject"
-                        class="form-control"
-                        type="text"
-                      />
-                    </div>
-                    <div class="form-group">
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Describe your project or message"
-                        rows="3"
-                        class="form-control"
-                      ></textarea>
-                    </div>
-                    <div class="send">
-                      <button
-                        class="m-btn m-btn-theme"
-                        onclick="send_mail()"
-                        type="button"
-                        value="Send"
-                      >
-                        Send
-                      </button>
-                      <span
-                        id="suce_message"
-                        class="text-success"
-                        style="display: none"
-                        >Message Sent Successfully</span
-                      >
-                      <span
-                        id="err_message"
-                        class="text-danger"
-                        style="display: none"
-                        >Message Sending Failed</span
-                      >
-                    </div>
-                  </form>
-                </div>
-                <!-- / -->
+                  <!-- Contact Form -->
+                  <div class="contact-form">
+                      <h2>Say Something</h2>
+                      <form action="https://api.web3forms.com/submit" method="POST">
+                          <input type="hidden" name="access_key" value="c22e14dc-b5bd-4fd6-bb8a-38bb86254506" />
+                          <div class="form-group">
+                              <input name="name" id="name" placeholder="Full Name" class="form-control" type="text" required />
+                          </div>
+                          <div class="form-group">
+                              <input name="email" id="email" placeholder="Email" class="form-control" type="email" required />
+                          </div>
+                          <div class="form-group">
+                              <input name="subject" id="subject" placeholder="Subject" class="form-control" type="text" required />
+                          </div>
+                          <div class="form-group">
+                              <textarea name="message" id="message" placeholder="Describe your project or message" rows="3" class="form-control" required></textarea>
+                          </div>
+                          <div class="send">
+                              <button class="m-btn m-btn-theme" type="submit" value="Send">Send</button>
+                          </div>
+                      </form>
+                      <span id="suce_message" class="text-success" style="display: none">Message Sent Successfully</span>
+                      <span id="err_message" class="text-danger" style="display: none">Message Sending Failed</span>
+                  </div>
+                  <!-- / -->
               </div>
-            </div>
           </div>
-        </div>
-        <!-- Container -->
-      </section>
+      </div>
+  </div>
+  <!-- Container -->
+</section>
+<!-- Contact End -->
+
       <!-- Contact End -->
     </main>
     <!-- Main End -->
